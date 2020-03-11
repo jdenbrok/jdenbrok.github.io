@@ -8753,5 +8753,21 @@ textarea.form-control {
     stroke-dashoffset: -136px; } }
 
 
-
+/*
+Custom commands and classes
+*/
+.image-cropper {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+  margin-left: //centers the image
+  height: 10%;
+  width: auto;
+}
 

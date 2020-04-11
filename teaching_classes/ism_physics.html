@@ -27,8 +27,27 @@
     <link rel="stylesheet" href="../css/flaticon.css">
     <link rel="stylesheet" href="../css/icomoon.css">
     <link rel="stylesheet" href="../css/style.css">
+
+    <script type="text/javascript">
+// PASSWORD PROTECTION SCRIPT
+
+	function TheLogin() {
+	// Hello Hacker, you see that I used only a really simple password protection. So go ahead and inspect the content.
+	var password = 'ISM_rocks';
+
+	if (this.document.login.pass.value == password) {
+ 	 top.location.href="ism_physics_in.html";
+	}
+	else {
+  	window.alert("Incorrect password, please try again.");
+ 	 }
+}
+
+</script>
+
   </head>
   <body>
+   
 
 	<div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
@@ -66,9 +85,15 @@
 	            <h2 class="mb-3 font-weight-bold">Physics of the Interstellar Medium</h2>
 	            <p>In this lecture, we will learn about the stuff that is inbetween the stars in our galaxy.</p>
 	            
-	            
+	            <div style="text-align: center">
+				Enter the password:<br>
+				<form name="login" style="margin: 5px 0px 0px 0px;">
+				<input type="text" name="pass" size="17" onkeydown="if(event.keyCode==13) event.keyCode=9;" style="width: 130px;"><br>
+				<input type="button" value="Click to Login" style="width: 134px; margin: 4px auto 4px auto;" onclick="javascript:TheLogin(this.form)">
+				</form>
+   				</div>
 
-
+   				
 	            
 	              <!-- END comment-list -->
 	              
@@ -145,6 +170,7 @@
   <script src="../https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="../js/google-map.js"></script>
   <script src="../js/main.js"></script>
+ 
     
   </body>
 </html>

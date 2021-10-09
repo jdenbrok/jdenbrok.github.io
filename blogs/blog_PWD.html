@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog - PWD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+        
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+          src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+  </head>
+  <body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+			<h1 id="colorlib-logo"><a href="../index.html"><span class="img" style="background-image: url(../images/pic00.jpg);"></span>Jakob den Brok</a></h1>
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../about.html">About Me</a></li>
+					<li><a href="../teaching.html">Teaching</a></li>
+					<li><a href="../research.html">Research</a></li>
+					<li class="colorlib-active"><a href="../blog.html">Blog</a></li>
+					<li><a href="../contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			
+				</div>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-bread">
+				<div class="container">
+					<div class="row no-gutters slider-text justify-content-center align-items-center">
+	          			<div class="col-md-8 ftco-animate">
+	            			<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p>
+	            			<h1 class="bread">Blog – Population Weighted Density</h1>
+	          			</div>
+	        		</div>
+				</div>
+			</section>
+
+
+
+            </section>
+            <section class="ftco-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 ftco-animate">
+                <i> 09 October 2021 – Jakob den Brok</i>
+                
+                <p>
+                
+            
+                <iframe title="Europe – Population Weighted Density (PWD)" aria-label="Map" id="datawrapper-chart-5QSHG" src="https://datawrapper.dwcdn.net/5QSHG/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="621"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+                
+                </p>
+                
+                <h2 class="mb-3 font-weight-bold">How Dense Do People Really Live?</h2>
+                <p> If we want to quantify how densely populated people live in different countries, we generally just use the <i> population density </i> (PD). The PD is a straightforward metric since we divide the total population by the area (for example, the country's area). With the PD, we thus quantify how densely an area is populated if we were to distribute the inhabitants equally across the region. </p>
+                
+                <p> Such an approach to quantify the population density is sensible if we do not expect significant variation. This is the case if we, for example, assess the density within a particular city or smaller urban regions. But how do we correctly interpret the PD over larger areas, such as a whole country? Take a country such as Russia, for example. With a population of roughly 140 million and an area of 17 million square kilometers she has a PD of about 8 ppl/km$^2$. Does that mean that on <i> average </i> people live very scattered in Russia, with only 8 people per square kilometer?
+                </p>
+                
+                <p> Well, not necessarily. Generally, when we talk about population density in everyday life, we envision what the population density is that an average inhabitant of a country <i> experiences </i>. This is however not quantified by the PD<sup>1</sup>! If, for example, the population of a large country is only living in a few highly populated cities, the average person will experience a high population density, while the PD for the total country will be low due to the large totatl area of the country.
+                <p>
+                The <b> population weighted density </b> (PWD) is a metric that better describes the population density an average person in a specific country experiences. The metric was already proposed a while ago, in 1984 by statistician <a href="https://link.springer.com/article/10.2307/2061168" target = "_blank"> John Craig</a>. To compute the metric, wwe have to subdivide the region we want to analyze into smaller parcels. The PWD<sup>2</sup> is then the weighted average of all population densities, where weigh each parcel's population density $p_i$ with its respective population $N^{\rm pop}_i$:
+                $$
+                    {\rm PWD} = \frac{\sum_i \left(p_i\cdot N^{\rm pop}_i\right)}{\sum_i N^{\rm pop}_i}
+                $$
+                </p>
+                
+                <p> Generally, if the population is equally distriuted across a country, then the PWD is equal to the PD. Howeve, if the population will concentrate in a few densly populated cities, then the PWD will tend to increase significantly with respect to the PD.
+                
+                <p>
+                In the interactive map above, I show the PWD for the different European countries, based on data obtained from <a href="https://www.worldpop.org/project/categories?id=20" target="_blank"> WorldPop </a>. Here are some observations I found interesting:
+                </p>
+                <ol>
+                    <li> <b>Countries along the Mediterranean:</b><br>
+                        In particular Spain, Itally, Greece, and Turkey show relatively large PWDs (>5000 ppl/km$^2$). This means that these countries have populatins that tend to be highly concetrated within more densly populated areas. In Turkey, for example, Istanbul's metropolitan area has a population of more than 15 million. So 1 in 5 people in Turkey live there. Furthermore, the metropolitan areas of Ankara, Izmir, Bursa and Antalya contain another 20 million people together. Also in Greece, almost have of the population live in either the metropolitan area of Athens or Thessaloniki.
+                        Generally, it shows thus, that in these countries, the people tend to live in cities (defined as settlement with density >1500 ppl/km$^2$).
+                    <li> <b>Russia</b><br>
+                        In terms of PD, Russia is generally at the bottom of the list, with one of the lowest densities. But if we weight by population, we see that with a PWD of ca. 4000 ppl/km$^2$, also the population of Russia lives on average in a city.
+                    <li> <b>Germany</b><br>
+                        While Germany is the thirs most populous country in Europe (after Russia and Turkey), it shows a very low PWD with only ca. 1800 ppl/km$^2$. This means that the population in Germany is more distributed across the country. An indication of this is the fact that <a href="https://de.wikipedia.org/wiki/Metropolregion#In_Deutschland" target="_blank"> half the area of Germany </a> counts as <i>metropolitan region</i>. Thus the population is very much spread out and not just concentrated in densly populated cities.
+                </ol>
+                
+                There is of course much more that can be seen from these maps. Generally, this maps showed me a fresh and new way how to think of population density across Europe.
+                
+                
+                <h5 class="mb-3 mt-5 font-weight-bold">Notes</h5>
+                <p> <sup>1</sup> I am aware that strictly speaking, I am talking here about the <b> gross </b> population density. We can do better and use the <i>net</i> population density, where we divide the population by the residential land area only (instead of all land area). However, the net population density still might not capture accuratly what population density the average inhabitant experiences.</p>
+                <p> <sup>2</sup> To be more precise, this is known as the <i>population weighted arithmetic mean density</i>.</p>
+                
+                
+                
+            
+
+			    		</div>
+
+	    				<div class="col-lg-4 sidebar ftco-animate bg-light">
+	            			<div class="sidebar-box">
+	              				<form action="#" class="search-form">
+	                			<div class="form-group">
+	                  				<span class="icon icon-search"></span>
+	                  				<input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+	                			</div>
+	             				</form>
+	            			</div>
+	            			<div class="sidebar-box ftco-animate">
+	            				<h3 class="sidebar-heading">Categories</h3>
+	              				<ul class="categories">
+	                				<li><a href="#">Astronomy <span>(1)</span></a></li>
+	               				 	<li><a href="#">Maps <span>(1)</span></a></li>
+	              				</ul>
+	            			</div>
+	          			</div><!-- END COL -->
+	    			</div>
+
+	    		</div>
+
+	    	</section>
+
+
+
+	    <footer class="ftco-footer ftco-bg-dark ftco-section">
+	      <div class="container px-md-5">
+	        <div class="row mb-5">
+	          <div class="col-md">
+	            <div class="ftco-footer-widget mb-4 ml-md-4">
+	              <h2 class="ftco-heading-2">Current Lecture</h2>
+	              
+	                
+	                <a href="../teaching_classes/intro_astro.html">
+	                	<img alt="Qries"  src=../images/ALMA_2.jpg width="230" height="140">
+	                </a>
+	             <h2><a href="../teaching_classes/intro_astro.html">Intro to Astronomy</a></h2>
+	            </div>
+	          </div>
+	          
+	          <div class="col-md">
+	            <div class="ftco-footer-widget mb-4">
+	            	<h2 class="ftco-heading-2">Contact Info</h2>
+	            	<div class="block-23 mb-3">
+		              <ul>
+		                <li><span class="icon icon-map-marker"></span><span class="text">Auf dem Hügel 71, Bonn, Germany</span></li>
+		                <li><a href="mailto:jdenbrok@astro.uni-bonn.de"><span class="icon icon-envelope"></span><span class="text">jdenbrok@astro.uni-bonn.de</span></a></li>
+		              </ul>
+		            </div>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="row">
+	          <div class="col-md-12">
+
+	            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	          </div>
+	        </div>
+	      </div>
+	    </footer>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/bootstrap-datepicker.js"></script>
+  <script src="../js/jquery.timepicker.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+    
+  </body>
+</html>

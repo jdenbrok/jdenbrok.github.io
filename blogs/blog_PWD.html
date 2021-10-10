@@ -87,33 +87,33 @@
                 <h2 class="mb-3 font-weight-bold">How Dense Do People Really Live?</h2>
                 <p> If we want to quantify how densely populated people live in different countries, we generally just use the <i> population density </i> (PD). The PD is a straightforward metric since we divide the total population by the area (for example, the country's area). With the PD, we thus quantify how densely an area is populated if we were to distribute the inhabitants equally across the region. </p>
                 
-                <p> Such an approach to quantify the population density is sensible if we do not expect significant variation. This is the case if we, for example, assess the density within a particular city or smaller urban regions. But how do we correctly interpret the PD over larger areas, such as a whole country? Take a country such as Russia, for example. With a population of roughly 140 million and an area of 17 million square kilometers she has a PD of about 8 ppl/km$^2$. Does that mean that on <i> average </i> people live very scattered in Russia, with only 8 people per square kilometer?
+                <p> Such an approach to quantify the population density is sensible if we do not expect significant variation. This is the case if we, for example, assess the density within a particular city or smaller urban regions. But how do we correctly interpret the PD over larger areas, such as a whole country? Take a country such as Russia, for example. With a population of roughly 140 million and an area of 17 million square kilometers, she has a PD of about 8 ppl/km<sup>2</sup>. Does that mean that on <i> average </i> people live very scattered in Russia, with only eight people per square kilometer?
                 </p>
                 
-                <p> Well, not necessarily. Generally, when we talk about population density in everyday life, we envision what the population density is that an average inhabitant of a country <i> experiences </i>. This is however not quantified by the PD<sup>1</sup>! If, for example, the population of a large country is only living in a few highly populated cities, the average person will experience a high population density, while the PD for the total country will be low due to the large totatl area of the country.
+                <p> Well, not necessarily. Generally, when we talk about population density in everyday life, we envision the population density that an average inhabitant of a country <i> experiences </i>. However, this matter of fact is not quantified by the PD<sup>1</sup>! If, for example, the population of a large country is only living in a few highly populated cities, the average person will experience a high population density. In contrast, the PD for the entire country will be low due to the large total area of the country.
                 <p>
-                The <b> population weighted density </b> (PWD) is a metric that better describes the population density an average person in a specific country experiences. The metric was already proposed a while ago, in 1984 by statistician <a href="https://link.springer.com/article/10.2307/2061168" target = "_blank"> John Craig</a>. To compute the metric, wwe have to subdivide the region we want to analyze into smaller parcels. The PWD<sup>2</sup> is then the weighted average of all population densities, where weigh each parcel's population density $p_i$ with its respective population $N^{\rm pop}_i$:
-                $$
-                    {\rm PWD} = \frac{\sum_i \left(p_i\cdot N^{\rm pop}_i\right)}{\sum_i N^{\rm pop}_i}
-                $$
-                </p>
+                The <b> population weighted density </b> (PWD) is a metric that better describes the population density an average person in a specific country experiences. The metric was already proposed a while ago, in 1984 by statistician <a href="https://link.springer.com/article/10.2307/2061168" target = "_blank"> John Craig</a>. To compute the metric, we have to subdivide the region we want to analyze into smaller parcels. The PWD<sup>2</sup> is then the weighted average of all population densities, where weigh each parcel's population density p<sub>i</sub> with its respective population N<sup>pip</sup><sub>i</sub>:
                 
-                <p> Generally, if the population is equally distriuted across a country, then the PWD is equal to the PD. Howeve, if the population will concentrate in a few densly populated cities, then the PWD will tend to increase significantly with respect to the PD.
+                </p>
+                <p>
+                  <img src="../images/PWD_equation.png" alt="" width="30%" class="img-fluid">
+                </p>
+                <p> Generally, if the population is equally distributed across a country, the PWD is equal to the PD. However, if the population concentrates in a few densely populated cities, then the PWD will increase significantly with respect to the PD.
                 
                 <p>
                 In the interactive map above, I show the PWD for the different European countries, based on data obtained from <a href="https://www.worldpop.org/project/categories?id=20" target="_blank"> WorldPop </a>. Here are some observations I found interesting:
                 </p>
                 <ol>
                     <li> <b>Countries along the Mediterranean:</b><br>
-                        In particular Spain, Itally, Greece, and Turkey show relatively large PWDs (>5000 ppl/km$^2$). This means that these countries have populatins that tend to be highly concetrated within more densly populated areas. In Turkey, for example, Istanbul's metropolitan area has a population of more than 15 million. So 1 in 5 people in Turkey live there. Furthermore, the metropolitan areas of Ankara, Izmir, Bursa and Antalya contain another 20 million people together. Also in Greece, almost have of the population live in either the metropolitan area of Athens or Thessaloniki.
-                        Generally, it shows thus, that in these countries, the people tend to live in cities (defined as settlement with density >1500 ppl/km$^2$).
+                        In particular, Spain, Italy, Greece, and Turkey show relatively large PWDs (>5000 ppl/km<sup>2</sup>). This means that these countries have populations that tend to be highly concentrated within more densely populated areas. In Turkey, for example, Istanbul's metropolitan area has a population of more than 15 million. So 1 in 5 people in Turkey live there. Furthermore, the urban areas of Ankara, Izmir, Bursa, and Antalya contain another 20 million people together. Also, in Greece, almost half of the population lives in either the metropolitan area of Athens or Thessaloniki.
+                         Generally, it shows thus, that in these countries, the people tend to live in cities (defined as settlement with density >1500 ppl/km<sup>2</sup>).
                     <li> <b>Russia</b><br>
-                        In terms of PD, Russia is generally at the bottom of the list, with one of the lowest densities. But if we weight by population, we see that with a PWD of ca. 4000 ppl/km$^2$, also the population of Russia lives on average in a city.
+                        Russia is generally at the bottom of the list in terms of PD, with one of the lowest densities. But if we weigh by population, we see that Russia's population also lives on average in a city with a PWD of ca. 4000 ppl/km<sup>2</sup>.
                     <li> <b>Germany</b><br>
-                        While Germany is the thirs most populous country in Europe (after Russia and Turkey), it shows a very low PWD with only ca. 1800 ppl/km$^2$. This means that the population in Germany is more distributed across the country. An indication of this is the fact that <a href="https://de.wikipedia.org/wiki/Metropolregion#In_Deutschland" target="_blank"> half the area of Germany </a> counts as <i>metropolitan region</i>. Thus the population is very much spread out and not just concentrated in densly populated cities.
+                        While Germany is the third most populous country in Europe (after Russia and Turkey), it shows a very low PWD with only ca. 1800 ppl/km<sup>2</sup>. This means that the population in Germany is more distributed across the country. An indication of this is the fact that <a href="https://de.wikipedia.org/wiki/Metropolregion#In_Deutschland" target="_blank"> half the area of Germany </a> counts as <i>metropolitan region</i>. Thus the population is very much spread out and not just concentrated in densely populated cities.
                 </ol>
                 
-                There is of course much more that can be seen from these maps. Generally, this maps showed me a fresh and new way how to think of population density across Europe.
+                There is, of course, much more that can be seen from these maps. Generally, these maps showed me a fresh and new way to think of population density across Europe.
                 
                 
                 <h5 class="mb-3 mt-5 font-weight-bold">Notes</h5>

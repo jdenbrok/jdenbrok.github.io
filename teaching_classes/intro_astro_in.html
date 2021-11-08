@@ -3,7 +3,7 @@
 	<meta name="robots" content="nofollow">
 
   <head>
-    <title>PVK Physics</title>
+    <title>Astro 121</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="../css/icomoon.css">
     <link rel="stylesheet" href="../css/style.css">
 
+    <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
     
   </head>
   <body>
@@ -37,7 +38,7 @@
 	<div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url(../images/pic00.jpg);"></span>Jakob den Brok</a></h1>
+			<h1 id="colorlib-logo"><a href="../index.html"><span class="img" style="background-image: url(../images/pic00.jpg);"></span>Jakob den Brok</a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li><a href="../index.html">Home</a></li>
@@ -58,8 +59,8 @@
 				<div class="container">
 					<div class="row no-gutters slider-text justify-content-center align-items-center">
 	          <div class="col-md-8 ftco-animate">
-	            <p class="breadcrumbs"><span class="mr-2"><a href="../index.html">Home</a></span> <span class="mr-2"><a href="../teaching.html">Teaching</span></a>   <span>Physics 1 & 2</span></p>
-	            <h1 class="bread">PVK Physics 1 & 2</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="../index.html">Home</a></span> <span class="mr-2"><a href="../teaching.html">Teaching</span></a>   <span>Introduction to Astronomy</span></p>
+	            <h1 class="bread">Introduction to Astronomy</h1>
 	          </div>
 	        </div>
 				</div>
@@ -67,20 +68,41 @@
 	    	<div class="container">
 	    		<div class="row">
 	    			<div class="col-lg-8 ftco-animate">
-	            <h2 class="mb-3 font-weight-bold">Physics 1 & 2</h2>
-	            <p>This PVK is aimed at the physics lectures for chemists at the ETH Zurich. The lecture material is mainly based on the Tipler Physics textbook.</p>
-	           
+	            <h2 class="mb-3 font-weight-bold">Intro Atro121</h2>
+	            <p>Auf der folgenden Seite beschreibe und visualisiere ich  astronomische Koordinatensysteme. Die Geogebra Plug-Ins sind interaktiv, man kann also die Orientierung ändern oder Sterne, etc. verschieben.  </p>
+                
+                <h5 class="mb-6 font-weight-bold">Astronmische Koordinatensysteme</h2>
+                
+	           Um die Position der Sterne, Planeten oder anderer Objekte am Himmel zu beschreiben gibt es verschiedene Möglichkeiten. Häufige Verwendung finden das sogenannte <i>horizontale</i> und <i>äquatoriale</i> Koordinatensystem.
 
-
+               <h5 class="mb-6 font-weight-bold">1) Horizontale Koordinatensysteme</h2>
 	            
+                <p> Beim horizontalen Koordinatensystem steht der Beobachter im Mittelpunkt. Wir beschreiben die Position anhand dem Höhenwinkel (h) und dem Azimuth (a). Die Bezugsrichtung ist generell Süden (blauer Pfeil). Verschieben Sie Polaris um zu sehen, wie sich die Sternbahn abhängig der geographischen Breite verändert.
+                    
 	              <!-- END comment-list -->
 	              
-	              
+                  <div id="ggb-element">
+                      <script>
+                          var ggbApp = new GGBApplet({"appName": "3D", "width": 1000, "height": 600, "showToolBar": true, "showAlgebraInput": false, "showMenuBar": false, "material_id":"snvk8yje" }, true);
+                          window.addEventListener("load", function() {
+                              ggbApp.inject('ggb-element');
+                          });
+                      </script>
+                  
+                  </div>
+                  <br>
+                  <h5 class="mb-6 font-weight-bold">2) (Rotierendes) Äquatoriales Koordinatensystem</h2>
+                <p>Beim äquatorialen Koordinatensystem setzen wir die Erde in den Mittelpunkt. Wir beschreiben die Position anhand der Deklination &delta; (in blau eigezeichnet) und der Rekaszension      &alpha; (in grün eingezeichnet). Bezugspunkt ist der Frühlingspunkt (einer der Knoten zwischen Himmelsäquator und Ekliptik). Verschieben Sie den Stern auf der Himmelskugel und sehen Sie, wie sich die Deklination und Rektaszension verändern.</p>
 
-	            
-	            
-
-							
+                <div id="ggb-element2">
+                    
+                    <script>
+                        var ggbApp2 = new GGBApplet({"appName": "3D", "width": 1000, "height": 600, "showToolBar": true, "showAlgebraInput": false, "showMenuBar": false, "material_id":"wafss9ay" }, true);
+                        window.addEventListener("load", function() {
+                            ggbApp2.inject('ggb-element2');
+                        });
+                    </script>
+                </div>
 
 	            
 	          </div><!-- END COL -->

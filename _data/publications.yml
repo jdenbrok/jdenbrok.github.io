@@ -1,0 +1,387 @@
+# Publications shown on publications.html.
+# To add a paper: copy an entry, fill in the fields. Order within each list = order on the page (newest first).
+# topic must be one of the keys under 'topics'.
+
+topics:
+  co: "CO & molecular gas"
+  dense: "Dense gas"
+  sf: "Star formation & ISM"
+  agn: "AGN"
+  lens: "Lensed quasars"
+
+first_author:
+  - title: "From Scaling Relations to Physical Laws: Constraining the Physics of Star Formation Across Local Galaxies"
+    authors: "<b>den Brok</b>, Bacchini, Boogaard et al."
+    year: 2026
+    ref: "ALMA2040 White Paper Series"
+    label: "White paper"
+    arxiv: "2610.21891"
+    topic: "co"
+    figure: "2610.21891.jpg"
+    figure_alt: "Comparison of how well current ALMA and ALMA2040 constrain molecular gas temperature and density from CO and 13CO lines"
+    summary: "How cold gas turns into stars is still one of the big open questions in galaxy evolution. Gravity, turbulence and feedback from stars all reproduce the same galaxy-wide trends, so telling them apart requires measuring the temperature, density and chemistry of the gas in individual molecular clouds across many galaxies. This white paper shows how a next-generation ALMA (ALMA2040) could make millions of such measurements, needing minutes per pointing where today's ALMA needs hours."
+  - title: "Constraining resolved extragalactic R<sub>21</sub> variation with well calibrated ALMA observations"
+    authors: "<b>den Brok</b>, Oakes, Leroy et al."
+    year: 2025
+    ref: "ApJ, 988, 162"
+    arxiv: "2506.09125"
+    topic: "co"
+    figure: "2506.09125.jpg"
+    figure_alt: "ALMA CO(1-0) maps of nearby galaxies next to their optical images"
+    summary: "Astronomers measure molecular gas with either the CO(1-0) or the CO(2-1) line and convert between the two using their ratio, R<sub>21</sub>. Using consistently calibrated ALMA maps of 14 nearby galaxies, we show that this ratio varies much less from galaxy to galaxy than previously thought, with a typical value of 0.64 that rises toward galaxy centers. For most studies, assuming a fixed ratio does not noticeably bias gas mass estimates."
+  - title: "CO isotopologue-derived molecular gas conditions and CO-to-H<sub>2</sub> conversion factors in M51"
+    authors: "<b>den Brok</b>, Jiménez-Donaire, Leroy et al."
+    year: 2025
+    ref: "AJ, 169, 18"
+    arxiv: "2410.21399"
+    topic: "co"
+    figure: "2410.21399.jpg"
+    figure_alt: "Maps of gas temperature, beam filling factor and optical depth across the center of M51"
+    summary: "Combining three major interferometer surveys of the Whirlpool Galaxy (M51), we map rare CO isotopologues across its center and inner spiral arms at 170 pc resolution. Modeling these lines reveals the temperature and density of the gas, and how much CO light corresponds to a given mass of molecular gas: less gas per unit of CO light than in the Milky Way. The study shows that careful line modeling is needed to weigh molecular gas reliably."
+  - title: "Resolved low-J <sup>12</sup>CO excitation at 190 parsec resolution across NGC 2903 and NGC 3627"
+    authors: "<b>den Brok</b>, Leroy, Usero et al."
+    year: 2023
+    ref: "MNRAS, 526, 6347"
+    arxiv: "2310.18407"
+    topic: "co"
+    figure: "2310.18407.jpg"
+    figure_alt: "CO maps of NGC 3627 compared with Hubble, JWST and MUSE images"
+    summary: "Ratios between the lowest CO transitions are sensitive to the temperature and density of molecular gas. Using ALMA maps of three CO lines at 190 pc resolution across NGC 2903 and NGC 3627, we find that the ratios rise clearly toward the galaxy centers, with CO(3-2) reacting most strongly. Changes in gas temperature appear to be the main driver."
+  - title: "Wide-field CO isotopologue emission and the CO-to-H<sub>2</sub> factor across the nearby spiral galaxy M101"
+    authors: "<b>den Brok</b>, Bigiel, Chastenet et al."
+    year: 2023
+    ref: "A&A, 676, 93"
+    arxiv: "2302.03044"
+    doi: "10.1051/0004-6361/202245718"
+    topic: "co"
+    figure: "2302.03044.jpg"
+    figure_alt: "Optical image of the galaxy M101 with contours of CO emission"
+    summary: "The CO-to-H<sub>2</sub> conversion factor turns CO brightness into molecular gas mass, but it is not the same everywhere. New IRAM 30-m maps of CO and its rarer isotopologues across M101 show that the factor drops by about a factor of ten in the central 2 kpc. Taking this into account, star formation uses up the gas in the center about ten times faster than otherwise estimated."
+  - title: "BASS. XXVIII. Near-infrared Data Release 2: High-ionization and Broad Lines in Active Galactic Nuclei"
+    authors: "<b>den Brok</b>, Koss, Trakhtenbrot et al."
+    year: 2022
+    ref: "ApJS, 261, 7"
+    arxiv: "2207.12426"
+    doi: "10.3847/1538-4365/ac5b66"
+    topic: "agn"
+    figure: "2207.12426.jpg"
+    figure_alt: "Bar chart of coronal line detection rates versus ionization potential for different AGN types"
+    summary: "We present near-infrared VLT spectra of 168 nearby active galactic nuclei (AGN) from the BASS survey. Highly ionized coronal lines, which require very energetic radiation, appear in about half of them and track the X-ray output of the AGN more tightly than the commonly used optical [O III] line. Together with the first release, this is the largest near-infrared AGN spectral sample to date, with 266 AGN."
+  - title: "A CO isotopologue Line Atlas within the Whirlpool galaxy Survey (CLAWS)"
+    authors: "<b>den Brok</b>, Bigiel, Sliwa et al."
+    year: 2022
+    ref: "A&A, 662, 89"
+    arxiv: "2201.05165"
+    doi: "10.1051/0004-6361/202142247"
+    topic: "co"
+    figure: "2201.05165.jpg"
+    data: "https://www.iram.fr/ILPA/LP020/"
+    figure_alt: "Grid of maps of the Whirlpool Galaxy in many different molecular lines"
+    summary: "CLAWS is a deep, 149-hour IRAM 30-m survey of faint CO isotopologues and other molecules across the full disk of the Whirlpool Galaxy, M51. We present the data and show how the line ratios change with distance from the center and between spiral arms and the regions between them. These changes most likely reflect variations in the optical depth of the gas, possibly together with changes in its chemical makeup."
+  - title: "New constraints on the <sup>12</sup>CO(2-1)/(1-0) line ratio across nearby disc galaxies"
+    authors: "<b>den Brok</b>, Chatzigiannakis, Bigiel et al."
+    year: 2021
+    ref: "MNRAS, 504, 3221"
+    arxiv: "2103.10442"
+    doi: "10.1093/mnras/stab859"
+    topic: "co"
+    figure: "2103.10442.jpg"
+    figure_alt: "Maps of the CO(2-1)/(1-0) line ratio across nine nearby spiral galaxies"
+    summary: "Molecular gas masses are measured from either the CO(2-1) or the CO(1-0) line, so comparing studies requires knowing their ratio, R<sub>21</sub>. Combining new and archival maps of nine nearby spiral galaxies, we find an average R<sub>21</sub> of 0.64 with only weak changes across each disk, and slightly higher values where gas is denser and star formation more intense."
+  - title: "Probing the AGN unification model at redshift z ~ 3 with MUSE observations of giant Lya nebulae"
+    authors: "<b>den Brok</b>, Cantalupo, Mackenzie et al."
+    year: 2020
+    ref: "MNRAS, 495, 1874"
+    arxiv: "2005.01732"
+    doi: "10.1093/mnras/staa1269"
+    topic: "agn"
+    figure: "2005.01732.jpg"
+    figure_alt: "MUSE maps of giant Lyman-alpha nebulae around two active galactic nuclei"
+    summary: "The AGN unification model says that different types of active galactic nuclei are the same objects seen from different angles. With MUSE, we compared the giant glowing hydrogen (Lyman-alpha) nebulae around type I and type II AGN in the early Universe (z ~ 3). Nebulae around type II AGN are more lopsided, as expected if their light escapes in cones, which supports the unification model at early times."
+
+coauthored:
+  - title: "Localized Deviations from the CO-Polycyclic Aromatic Hydrocarbon Relation in PHANGS-JWST Galaxies: Faint Polycyclic Aromatic Hydrocarbon Emission or Elevated CO Emissivity?"
+    authors: "Kim, Leroy, Sandstrom et al."
+    year: 2026
+    ref: "ApJ, 1001, 67"
+    arxiv: "2511.14833"
+    topic: sf
+  - title: "BASS. L. Near-infrared Data Release 3: A Spectral Atlas and Characterization of Active Galactic Nuclei"
+    authors: "Gillette, Koss, Kakkad et al."
+    year: 2026
+    ref: "ApJS, 282, 68"
+    arxiv: "2512.20702"
+    doi: "10.3847/1538-4365/ae2d58"
+    topic: agn
+  - title: "Deep Andromeda JCMT SCUBA-2 Observations. The Submillimeter Maps and Giant Molecular Clouds"
+    authors: "Jiao, Wu, Liu et al."
+    year: 2026
+    ref: "ApJS, 282, 39"
+    arxiv: "2511.14360"
+    topic: sf
+  - title: "Resolved Profiles of Stellar Mass, Star Formation Rate, and Predicted CO-to-H<sub>2</sub> Conversion Factor Across Thousands of Local Galaxies"
+    authors: "Sun, Teng, Chiang et al."
+    year: 2025
+    ref: "ApJ, 994, 263"
+    arxiv: "2510.05214"
+    topic: co
+  - title: "Surveying the Whirlpool at Arcseconds with NOEMA (SWAN): III. <sup>13</sup>CO/C<sup>18</sup>O ratio variations across the M51 galaxy"
+    authors: "Galić, Thorp, Bigiel et al."
+    year: 2025
+    ref: "A&A, 702, 250"
+    arxiv: "2508.15901"
+    doi: "10.1051/0004-6361/202453583"
+    topic: co
+  - title: "The SWAN view of dense gas in the Whirlpool: A cloud-scale comparison of N<sub>2</sub>H<sup>+</sup>, HCO<sup>+</sup>, HNC, and HCN emission in M51"
+    authors: "Stuber, Schinnerer, Usero et al."
+    year: 2025
+    ref: "A&A, 702, 66"
+    arxiv: "2507.19439"
+    doi: "10.1051/0004-6361/202554473"
+    topic: dense
+  - title: "The impact of spiral arms on the star formation life cycle"
+    authors: "Romanelli, Chevance, Kruijssen et al."
+    year: 2025
+    ref: "A&A, 698, 296"
+    arxiv: "2505.10908"
+    topic: sf
+  - title: "Cloud-scale Gas Properties, Depletion Times, and Star Formation Efficiency per Freefall Time in PHANGS-ALMA"
+    authors: "Leroy, Sun, Meidt et al."
+    year: 2025
+    ref: "ApJ, 985, 64"
+    arxiv: "2502.04481"
+    topic: sf
+  - title: "Polycyclic Aromatic Hydrocarbon and CO(2-1) Emission at 50-150 pc Scales in 70 Nearby Galaxies"
+    authors: "Chown, Leroy, Sandstrom et al."
+    year: 2025
+    ref: "ApJ, 983, 1"
+    arxiv: "2410.05397"
+    topic: sf
+  - title: "Surveying the Whirlpool at Arcseconds with NOEMA (SWAN): II. Survey design and observations"
+    authors: "Stuber, Pety, Usero et al."
+    year: 2025
+    ref: "A&A, 696, 182"
+    arxiv: "2503.00534"
+    doi: "10.1051/0004-6361/202452330"
+    topic: dense
+  - title: "Application of Resolved Low-J Multi-CO Line Modeling with RADEX to Constrain the Molecular Gas Properties in the Starburst M82"
+    authors: "Zhang, <b>den Brok</b>, Zhang et al."
+    year: 2025
+    ref: "ApJ, 982, 1"
+    arxiv: "2502.16018"
+    topic: co
+    second_author: true
+  - title: "Dense gas scaling relations at kiloparsec scales across nearby galaxies with the ALMA ALMOND and IRAM 30 m EMPIRE surveys"
+    authors: "Neumann, Jimenez-Donaire, Leroy et al."
+    year: 2025
+    ref: "A&A, 693, 13"
+    arxiv: "2412.10506"
+    doi: "10.1051/0004-6361/202453208"
+    topic: dense
+  - title: "PHANGS-MeerKAT and MHONGOOSE HI observations of nearby spiral galaxies: physical drivers of the molecular gas fraction"
+    authors: "Eibensteiner, Sun, Bigiel et al."
+    year: 2024
+    ref: "A&A, 691, 163"
+    arxiv: "2407.01716"
+    doi: "10.1051/0004-6361/202449944"
+    topic: sf
+  - title: "The properties and kinematics of HCN emission across the closest starburst galaxy NGC 253 observed with ALMA"
+    authors: "Bešlić, Barnes, Bigiel et al."
+    year: 2024
+    ref: "A&A, 689, 122"
+    arxiv: "2403.13751"
+    topic: dense
+  - title: "Gaia GraL: Gaia DR2 gravitational lens systems - VIII. A radio census of lensed systems"
+    authors: "Dobie, Sluse, Deller et al."
+    year: 2024
+    ref: "MNRAS, 528, 5880"
+    arxiv: "2311.07836"
+    topic: lens
+  - title: "Star Formation Efficiency in Nearby Galaxies Revealed with a New CO-to-H<sub>2</sub> Conversion Factor Prescription"
+    authors: "Teng, Chiang, Sandstrom et al."
+    year: 2024
+    ref: "ApJ, 961, 42"
+    arxiv: "2310.16037"
+    topic: co
+  - title: "Surveying the Whirlpool at Arcseconds with NOEMA (SWAN). I. Mapping the HCN and N<sub>2</sub>H<sup>+</sup> 3mm lines"
+    authors: "Stuber, Pety, Schinnerer et al."
+    year: 2023
+    ref: "A&A, 680, 20"
+    arxiv: "2312.09810"
+    doi: "10.1051/0004-6361/202348205"
+    topic: dense
+  - title: "The impact of H II regions on giant molecular cloud properties in nearby galaxies sampled by PHANGS ALMA and MUSE"
+    authors: "Zakardjian, Pety, Herrera et al."
+    year: 2023
+    ref: "A&A, 678"
+    arxiv: "2305.03650"
+    doi: "10.1051/0004-6361/202244520"
+    topic: sf
+  - title: "BASS XXXIV: A Catalog of the Nuclear Mm-wave Continuum Emission Properties of AGNs Constrained on Scales <100-200 pc"
+    authors: "Kawamuro, Ricci, Mushotzky et al."
+    year: 2023
+    ref: "ApJS, 269, 24"
+    arxiv: "2309.02776"
+    topic: agn
+  - title: "Spectral stacking of radio-interferometric data"
+    authors: "Neumann, <b>den Brok</b>, Bigiel et al."
+    year: 2023
+    ref: "A&A, 675, 104"
+    arxiv: "2305.10240"
+    doi: "10.1051/0004-6361/202346129"
+    topic: dense
+    second_author: true
+  - title: "Kinematic analysis of the super-extended H I disk of the nearby spiral galaxy M 83"
+    authors: "Eibensteiner, Bigiel, Leroy et al."
+    year: 2023
+    ref: "A&A, 675, 37"
+    arxiv: "2304.02037"
+    doi: "10.1051/0004-6361/202245290"
+    topic: sf
+  - title: "ALMOND: Molecular cloud properties and gas density tracers across 25 nearby spiral galaxies with ALMA"
+    authors: "Neumann, Gallagher, Bigiel et al."
+    year: 2023
+    ref: "MNRAS, 521, 3348"
+    arxiv: "2302.03042"
+    doi: "10.1093/mnras/stad424"
+    topic: dense
+  - title: "Sub-kiloparsec empirical relations and excitation conditions of HCN and HCO<sup>+</sup>(3-2) in nearby star-forming galaxies"
+    authors: "García-Rodríguez, Usero, Leroy et al."
+    year: 2023
+    ref: "A&A, 672, 96"
+    arxiv: "2302.00450"
+    doi: "10.1051/0004-6361/202244317"
+    topic: dense
+  - title: "JWST First Results: Stellar-feedback-driven Excitation and Dissociation of Molecular Gas in the Starburst Ring of NGC 1365?"
+    authors: "Liu, Schinnerer, Cao et al."
+    year: 2023
+    ref: "ApJL, 944, L19"
+    arxiv: "2212.09652"
+    doi: "10.3847/2041-8213/aca973"
+    topic: sf
+  - title: "The JWST Treasury Survey: Star Formation, Feedback, and Dust Physics at High Angular Resolution in Nearby GalaxieS"
+    authors: "Lee, Sandstrom, Leroy et al."
+    year: 2023
+    ref: "ApJL, 944, L17"
+    arxiv: "2212.02667"
+    doi: "10.3847/2041-8213/acaaae"
+    topic: sf
+  - title: "A Global and Moderately Resolved View of Mid-infrared and CO Line Emission from Galaxies at the Start of the JWST Era"
+    authors: "Leroy, Bolatto, Sandstrom et al."
+    year: 2023
+    ref: "ApJL, 944, L10"
+    arxiv: "2212.09774"
+    doi: "10.3847/2041-8213/acab01"
+    topic: sf
+  - title: "BASS XXXII: Studying the Nuclear Millimeter-wave Continuum Emission of AGNs with ALMA at Scales <100-200 pc"
+    authors: "Kawamuro, Ricci, Imanishi et al."
+    year: 2022
+    ref: "ApJ, 938, 87"
+    arxiv: "2208.03880"
+    doi: "10.3847/1538-4357/ac8794"
+    topic: agn
+  - title: "BASS. XXX. Distribution Functions of DR2 Eddington Ratios, Black Hole Masses, and X-Ray Luminosities"
+    authors: "Ananna, Weigel, Trakhtenbrot et al."
+    year: 2022
+    ref: "ApJS, 261, 9"
+    arxiv: "2201.05603"
+    doi: "10.3847/1538-4365/ac5b64"
+    topic: agn
+  - title: "BASS. XXIX. The Near-infrared View of the Broad-line Region (BLR): The Effects of Obscuration in BLR Characterization"
+    authors: "Ricci, Treister, Bauer et al."
+    year: 2022
+    ref: "ApJS, 261, 8"
+    arxiv: "2111.13720"
+    doi: "10.3847/1538-4365/ac5b67"
+    topic: agn
+  - title: "BASS. XXVI. DR2 Host Galaxy Stellar Velocity Dispersions"
+    authors: "Koss, Trakhtenbrot, Ricci et al."
+    year: 2022
+    ref: "ApJS, 261, 6"
+    arxiv: "2207.12435"
+    doi: "10.3847/1538-4365/ac650b"
+    topic: agn
+  - title: "BASS. XXV. DR2 Broad-line-based Black Hole Mass Estimates and Biases from Obscuration"
+    authors: "Mejía-Restrepo, Trakhtenbrot, Koss et al."
+    year: 2022
+    ref: "ApJS, 261, 5"
+    arxiv: "2204.05321"
+    doi: "10.3847/1538-4365/ac6602"
+    topic: agn
+  - title: "BASS. XXIV. The BASS DR2 Spectroscopic Line Measurements and AGN Demographics"
+    authors: "Oh, Koss, Ueda et al."
+    year: 2022
+    ref: "ApJS, 261, 4"
+    arxiv: "2203.00017"
+    doi: "10.3847/1538-4365/ac5b68"
+    topic: agn
+  - title: "BASS. XXII. The BASS DR2 AGN Catalog and Data"
+    authors: "Koss, Ricci, Trakhtenbrot et al."
+    year: 2022
+    ref: "ApJS, 261, 2"
+    arxiv: "2207.12432"
+    doi: "10.3847/1538-4365/ac6c05"
+    topic: agn
+  - title: "BASS. XXI. The Data Release 2 Overview"
+    authors: "Koss, Trakhtenbrot, Ricci et al."
+    year: 2022
+    ref: "ApJS, 261, 1"
+    arxiv: "2207.12428"
+    doi: "10.3847/1538-4365/ac6c8f"
+    topic: agn
+  - title: "Linking stellar populations to H II regions across nearby galaxies. I. Constraining pre-supernova feedback from young clusters in NGC 1672"
+    authors: "Barnes, Chandar, Kreckel et al."
+    year: 2022
+    ref: "A&A, 662, 6"
+    arxiv: "2205.05679"
+    doi: "10.1051/0004-6361/202243766"
+    topic: sf
+  - title: "Low-J CO Line Ratios from Single-dish CO Mapping Surveys and PHANGS-ALMA"
+    authors: "Leroy, Rosolowsky, Usero et al."
+    year: 2022
+    ref: "ApJ, 927, 149"
+    arxiv: "2109.11583"
+    doi: "10.3847/1538-4357/ac3490"
+    topic: co
+  - title: "Gaia GraL: Gaia DR2 Gravitational Lens Systems. VII. XMM-Newton Observations of Lensed Quasars"
+    authors: "Connor, Stern, Krone-Martins et al."
+    year: 2022
+    ref: "ApJ, 927, 45"
+    arxiv: "2109.14103"
+    doi: "10.3847/1538-4357/ac4476"
+    topic: lens
+  - title: "A 2-3 mm high-resolution molecular line survey towards the centre of the nearby spiral galaxy NGC 6946"
+    authors: "Eibensteiner, Barnes, Bigiel et al."
+    year: 2022
+    ref: "A&A, 659, 173"
+    arxiv: "2201.02209"
+    doi: "10.1051/0004-6361/202142624"
+    topic: dense
+  - title: "PHANGS-ALMA: Arcsecond CO(2-1) Imaging of Nearby Star-forming Galaxies"
+    authors: "Leroy, Schinnerer, Hughes et al."
+    year: 2021
+    ref: "ApJS, 257, 43"
+    arxiv: "2104.07739"
+    doi: "10.3847/1538-4365/ac17f3"
+    topic: co
+  - title: "Gaia GraL: Gaia DR2 Gravitational Lens Systems. VI. Spectroscopic Confirmation and Modeling of Quadruply Imaged Lensed Quasars"
+    authors: "Stern, Djorgovski, Krone-Martins et al."
+    year: 2021
+    ref: "ApJ, 921, 42"
+    arxiv: "2012.10051"
+    doi: "10.3847/1538-4357/ac0f04"
+    topic: lens
+  - title: "Dense molecular gas properties on 100 pc scales across the disc of NGC 3627"
+    authors: "Bešlić, Barnes, Bigiel et al."
+    year: 2021
+    ref: "MNRAS, 506, 963"
+    arxiv: "2106.09742"
+    doi: "10.1093/mnras/stab1776"
+    topic: dense
+  - title: "PHANGS-ALMA Data Processing and Pipeline"
+    authors: "Leroy, Hughes, Liu et al."
+    year: 2021
+    ref: "ApJS, 255, 19"
+    arxiv: "2104.07665"
+    doi: "10.3847/1538-4365/abec80"
+    topic: co

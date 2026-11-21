@@ -1,0 +1,214 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+  <head>
+    <title>Publications - Jakob den Brok</title>
+    <meta name="description" content="Peer-reviewed publications of Dr. Jakob den Brok on molecular gas, CO lines and star formation in nearby galaxies.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/publications.css">
+  </head>
+  <body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+			<h1 id="colorlib-logo"><a href="index.html"><span class="img" style="background-image: url(images/pic00.jpg);"></span>Jakob den Brok</a></h1>
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Me</a></li>
+					<li><a href="teaching.html">Teaching</a></li>
+					<li><a href="research.html">Research</a></li>
+					<li class="colorlib-active"><a href="publications.html">Publications</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+
+			
+				</div>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-bread">
+				<div class="container">
+					<div class="row no-gutters slider-text justify-content-center align-items-center">
+	          			<div class="col-md-8">
+	            			<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Publications</span></p>
+	            			<h1 class="bread">Publications</h1>
+	          			</div>
+	        		</div>
+				</div>
+			</section>
+
+			{% assign pubs = site.data.publications %}
+			<section class="ftco-section">
+			<div class="container px-md-5">
+
+				<div class="pub-stats">
+					<div><div class="num">{{ pubs.first_author | size }}</div><div class="lbl">First-author publications</div></div>
+					<div><div class="num">{{ pubs.coauthored | size }}</div><div class="lbl">Co-authored papers</div></div>
+					<div class="links">
+						<a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22%5Eden%20Brok%2C%20J%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank">First-author list on ADS</a>
+						<a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22den%20Brok%2C%20J%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank">Full list on ADS</a>
+						<a href="https://orcid.org/0000-0002-8760-6157" target="_blank">ORCID</a>
+					</div>
+				</div>
+
+				<div class="pub-filters" role="group" aria-label="Filter publications by topic">
+					<button type="button" class="active" data-topic="all">All topics</button>
+					{% for t in pubs.topics %}<button type="button" data-topic="{{ t[0] }}">{{ t[1] }}</button>
+					{% endfor %}
+				</div>
+
+				<h2 class="pub-section-title">First-author papers</h2>
+				{% for p in pubs.first_author %}
+				<article class="pub-feature" data-topic="{{ p.topic }}">
+					<a class="pub-figure" href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank">
+						<img src="images/publications/{{ p.figure }}" alt="{{ p.figure_alt }}" loading="lazy">
+					</a>
+					<div class="pub-text">
+						<span class="pub-tag">{{ pubs.topics[p.topic] }}</span>{% if p.label %} <span class="pub-tag pub-tag-label">{{ p.label }}</span>{% endif %}
+						<h3>{{ p.title }}</h3>
+						<p class="pub-meta">{{ p.authors }} ({{ p.year }}), {{ p.ref }}</p>
+						<p class="pub-summary">{{ p.summary }}</p>
+						<p class="pub-links">
+							<a href="https://ui.adsabs.harvard.edu/abs/arXiv:{{ p.arxiv }}" target="_blank">ADS</a>
+							<a href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank">arXiv</a>
+							{% if p.doi %}<a href="https://doi.org/{{ p.doi }}" target="_blank">Journal</a>{% endif %}
+							{% if p.data %}<a href="{{ p.data }}" target="_blank">Data</a>{% endif %}
+						</p>
+					</div>
+				</article>
+				{% endfor %}
+
+				<h2 class="pub-section-title mt-5">Co-authored papers</h2>
+				{% assign year = nil %}
+				{% for p in pubs.coauthored %}
+					{% if p.year != year %}
+						{% unless forloop.first %}</ul></div>{% endunless %}
+						{% assign year = p.year %}
+						<div class="pub-year-group"><h4 class="pub-year">{{ year }}</h4><ul class="pub-list">
+					{% endif %}
+					<li data-topic="{{ p.topic }}">
+						<div class="t">{{ p.title }}</div>
+						<div class="m">{{ p.authors }}, {{ p.ref }}{% if p.second_author %}<span class="second">2nd author</span>{% endif %}</div>
+						<div class="l">
+							<a href="https://ui.adsabs.harvard.edu/abs/arXiv:{{ p.arxiv }}" target="_blank">ADS</a>
+							<a href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank">arXiv</a>
+							{% if p.doi %}<a href="https://doi.org/{{ p.doi }}" target="_blank">Journal</a>{% endif %}
+						</div>
+					</li>
+					{% if forloop.last %}</ul></div>{% endif %}
+				{% endfor %}
+
+			</div>
+			</section>
+
+	    <footer class="ftco-footer ftco-bg-dark ftco-section">
+	      <div class="container px-md-5">
+	        <div class="row mb-5">
+	          <div class="col-md">
+	            <div class="ftco-footer-widget mb-4 ml-md-4">
+	              <h2 class="ftco-heading-2">Latest News</h2>
+	              <ul class="list-unstyled">
+	                <li class="mb-2"><b>Nov 2026</b> &middot; Talk at the Lorentz Workshop &ldquo;Galaxies at its Peak&rdquo;</li>
+	                <li class="mb-2"><b>Sep 2026</b> &middot; Organized a session on ALMA2040 at the 2026 AG meeting</li>
+	              </ul>
+	            </div>
+	          </div>
+	          
+	          <div class="col-md">
+	            <div class="ftco-footer-widget mb-4">
+	            	<h2 class="ftco-heading-2">Contact Info</h2>
+	            	<div class="block-23 mb-3">
+		              <ul>
+                          <li><span class="icon icon-map-marker"></span><span class="text">Max Planck Institute for Astronomy<br>K&ouml;nigstuhl 17, 69117 Heidelberg, Germany</span></li>
+                          <li><a href="mailto:jakob.denbrok@gmail.com"><span class="icon icon-envelope"></span><span class="text">jakob.denbrok@gmail.com</span></a></li>
+		              </ul>
+		            </div>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="row">
+	          <div class="col-md-12">
+
+	            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	          </div>
+	        </div>
+	      </div>
+	    </footer>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  <script>
+    // Topic filter: show only papers whose data-topic matches the selected button.
+    document.querySelectorAll('.pub-filters button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var topic = btn.dataset.topic;
+        document.querySelectorAll('.pub-filters button').forEach(function (b) { b.classList.toggle('active', b === btn); });
+        document.querySelectorAll('[data-topic]').forEach(function (el) {
+          if (el.tagName === 'BUTTON') return;
+          el.classList.toggle('pub-hidden', topic !== 'all' && el.dataset.topic !== topic);
+        });
+        document.querySelectorAll('.pub-year-group').forEach(function (g) {
+          g.classList.toggle('pub-hidden', !g.querySelector('li:not(.pub-hidden)'));
+        });
+      });
+    });
+  </script>
+  </body>
+</html>

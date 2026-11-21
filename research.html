@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,8 @@
 
 
   <head>
-    <title>Reseach</title>
+    <title>Research - Jakob den Brok</title>
+    <meta name="description" content="Research of Dr. Jakob den Brok: molecular gas conditions from CO isotopologues, CO line ratios, and future millimeter facilities (ALMA2040).">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -31,6 +34,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/publications.css">
+    <link rel="stylesheet" href="css/research.css">
   </head>
   <body>
 
@@ -58,92 +63,78 @@
 			<section class="ftco-section ftco-bread">
 				<div class="container">
 					<div class="row no-gutters slider-text justify-content-center align-items-center">
-	          			<div class="col-md-8 ftco-animate">
+	          			<div class="col-md-8">
 	            			<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Research</span></p>
-	            			<h1 class="bread">Current & Past Research</h1>
+	            			<h1 class="bread">Research</h1>
 	          			</div>
 	        		</div>
 				</div>
 			</section>
 
-
-
+			{% assign r = site.data.research %}
+			{% assign pubs = site.data.publications %}
+			{% assign allpubs = pubs.first_author | concat: pubs.coauthored %}
 			<section class="ftco-section">
+			<div class="container px-md-5">
 
+				<p class="res-intro">{{ r.intro }}</p>
+				<nav class="res-toc">
+					{% for t in r.themes %}<a href="#{{ t.id }}">{{ t.title }}</a>{% endfor %}
+					<a href="#observing">Observing programs</a>
+					<a href="#past">Past research</a>
+				</nav>
 
-			<div class="container">
-
-	    		<div class="row d-flex">
-	    			<div class="col-lg-200">
-	    				<div class="row">
-	    					<div class="col-md-12">
-	    						<div class="blog-entry ftco-animate d-md-flex">
-	    								<a href="https://www.iram-institute.org/EN/content-page-434-7-158-240-434-0.html" target="_blank" class="img img-2" style="background-image: url(images/CLAWS_logo_sqr.png);"></a>
-										<div class="text text-2 p-4" style="width: 90%;">
-											
-											<h3><a href="research/research_CLAWS.html">CLAWS: An IRAM 30m Large Programme</a></h3>
-											<p> Part of my PhD project is to study CO isotopologues in M51 to better understand the physical conditions in the ISM. With the IRAM 30m M51 Large Programme we have unprecedented deep observations in the mm band covering several CO isotopologues simultaneously.
-											</p>
-											<p><a href="research/research_CLAWS.html" class="btn-custom">Read More <span class="ion-ios-arrow-forward"></span></a></p>
-										</div>
-								</div>
-							</div>
-						</div>
+				{% for t in r.themes %}
+				<article class="pub-feature res-theme{% if t.wide %} res-wide{% endif %}" id="{{ t.id }}">
+					<figure class="pub-figure"><img src="images/research/{{ t.image }}" alt="{{ t.image_alt }}" loading="lazy">{% if t.image_caption %}<figcaption class="res-caption">{{ t.image_caption }}</figcaption>{% endif %}</figure>
+					<div class="pub-text">
+						<h2 class="res-title">{{ t.title }}</h2>
+						<p class="pub-summary">{{ t.text }}</p>
+						<h4 class="res-sub">Key papers</h4>
+						<ul class="res-papers">
+						{% for id in t.papers %}{% for p in allpubs %}{% if p.arxiv == id %}
+							<li><a href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank">{{ p.title }}</a> <span class="m">{{ p.authors }} ({{ p.year }})</span></li>
+						{% endif %}{% endfor %}{% endfor %}
+						</ul>
+						{% if t.links %}<p class="pub-links">{% for l in t.links %}<a href="{{ l.url }}" target="_blank">{{ l.label }}</a>{% endfor %}</p>{% endif %}
 					</div>
-				</div>
-	    	</div>
+				</article>
+				{% endfor %}
 
-
-        
-	    	<div class="container">
-
-	    		<div class="row d-flex">
-	    			<div class="col-lg-20">
-	    				<div class="row">
-	    					<div class="col-md-12">
-	    						<div class="blog-entry ftco-animate d-md-flex">
-	    								<a href="https://www.bass-survey.com/" class="img img-2" style="background-image: url(images/BASS_logo.jpg);" target="_blanck"></a>
-										<div class="text text-2 p-4" style="width: 90%;">
-											<!--<img src="images/BASS_logo.jpg" align="left" hspace="2%" vspace="2%"  style="max-width:200px;width:100%"/>-->
-											<h3 class="mb-2"><a href="#">BASS Project: Restframe NIR of AGN</a></h3>              			
-											<p> I am an active member of the BAT AGN Spectroscopic Survey (BASS) project. As part of my Master Thesis I studied the restframe Near 	Infrared Regime of nearby AGN to probe potential tracers of AGN activities.
-											</p>
-											<p><a href="https://www.bass-survey.com/" class="btn-custom" target="_blanck">Check out Survey Website <span class="ion-ios-arrow-forward"></span></a></p>
-										</div>
-								</div>
-							</div>
-						</div>
+				<h2 class="pub-section-title mt-5" id="observing">Observing programs</h2>
+				<p>{{ r.observing.intro }}</p>
+				<div class="res-obs">
+					{% for o in r.observing.pi %}
+					<div class="res-obs-tile">
+						<div class="lbl">{{ o.telescope }}</div>
+						<div class="num">{{ o.hours }}</div>
+						<div class="m">{{ o.programs }} programs{% if o.note %} &middot; {{ o.note }}{% endif %}</div>
 					</div>
+					{% endfor %}
 				</div>
-	    	</div>
-	    	
-	    	
+				<ul class="res-highlights">
+					{% for h in r.observing.highlights %}<li>{{ h }}</li>{% endfor %}
+				</ul>
 
-            <div class="container">
+				<h2 class="pub-section-title mt-5" id="past">Past research</h2>
+				<div class="res-past">
+					{% for p in r.past %}
+					<div class="res-past-card">
+						<img src="images/research/{{ p.image }}" alt="{{ p.image_alt }}" loading="lazy">
+						<h3>{{ p.title }}</h3>
+						<p>{{ p.text }}</p>
+						<p class="pub-links">
+							<a href="https://arxiv.org/abs/{{ p.paper }}" target="_blank">Paper</a>
+							{% if p.url %}<a href="{{ p.url }}" target="_blank">{{ p.url_label }}</a>{% endif %}
+						</p>
+					</div>
+					{% endfor %}
+				</div>
 
-                <div class="row d-flex">
-                    <div class="col-lg-20">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="blog-entry ftco-animate d-md-flex">
-                                        <a href="" class="img img-2" style="background-image: url(images/muse_consortium.png);"></a>
-                                        <div class="text text-2 p-4" style="width: 90%;">
-                                            
-                                            <h3><a href="#">MUSE: Probing AGN Unification</a></h3>
-                                            <p> I performed active research as part of the MUSE consirtium with Prof. Sebastiano Cantalupo. I studied high Ly&alpha; & HeII nebulae around redshift AGN  to probe the classical AGN unification theory.
-                                            </p>
-                                            <p><a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.495.1874D/abstract" target = "_blank" class="btn-custom">See Published Research <span class="ion-ios-arrow-forward"></span></a></p>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+				<p class="mt-5">All papers, with summaries and figures, are on the <a href="publications.html">Publications</a> page.</p>
 
-	    	</section>
-
-
+			</div>
+			</section>
 
 	    <footer class="ftco-footer ftco-bg-dark ftco-section">
 	      <div class="container px-md-5">

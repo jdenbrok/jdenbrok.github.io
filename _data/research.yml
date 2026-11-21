@@ -1,0 +1,68 @@
+# Content of research.html.
+# Key papers are listed by arXiv id and pulled from _data/publications.yml.
+
+intro: "I study the cold molecular interstellar medium in nearby galaxies: how much molecular gas there is, what physical state it is in, and how it is turned into stars. My main tool is millimeter line emission from carbon monoxide (CO) and its rarer isotopologues, observed with telescopes such as ALMA, the SMA, NOEMA and the IRAM 30-m telescope."
+
+themes:
+  - id: isotopologues
+    title: "Gas conditions from CO isotopologues"
+    image: "isotopologues.jpg"
+    image_alt: "Optical image of the Whirlpool Galaxy M51 with contours of CO emission from the CLAWS survey"
+    text: "CO is our main tracer of molecular gas, but its brightest line is optically thick and reveals little about the gas itself. Its rarer isotopologues, such as <sup>13</sup>CO and C<sup>18</sup>O, are fainter but far more transparent, so their line ratios tell us about the temperature, density and optical depth of the gas, and how much molecular gas hides behind a given CO brightness (the CO-to-H<sub>2</sub> conversion factor). I led the analysis of CLAWS, a deep IRAM 30-m survey of the Whirlpool Galaxy (M51), and extended this work to M101 and to cloud-scale interferometric maps of M51. One key result: the conversion factor can drop by up to a factor of ten in galaxy centers."
+    papers: ["2410.21399", "2302.03044", "2201.05165", "2508.15901", "2502.16018"]
+    links:
+      - label: "CLAWS data products (IRAM)"
+        url: "https://www.iram.fr/ILPA/LP020/"
+
+  - id: line-ratios
+    title: "CO excitation and line ratios"
+    image: "line-ratios.jpg"
+    wide: true
+    image_alt: "CO(1-0) maps of 27 PHANGS galaxies, with a zoom-in on NGC 1566"
+    text: "Most surveys of molecular gas observe a single CO line and convert to other lines with an assumed ratio. I measure how ratios such as R<sub>21</sub> = CO(2-1)/CO(1-0) and CO(3-2)/CO(1-0) actually vary within and between galaxies. With carefully calibrated ALMA maps of 14 galaxies, we found that R<sub>21</sub> varies less between galaxies than previously thought, with a typical value of 0.64, but rises toward galaxy centers and where star formation is more intense. Higher transitions such as CO(3-2) react most strongly to changes in gas temperature."
+    papers: ["2506.09125", "2310.18407", "2103.10442", "2109.11583"]
+
+  - id: alma2040
+    title: "Future millimeter facilities: ALMA2040"
+    image: "alma2040.jpg"
+    wide: true
+    image_alt: "Group photo of the ALMA2040 workshop participants in Heidelberg, in front of a projected ALMA2040 illustration"
+    image_caption: "ALMA2040 workshop in Heidelberg. Projected artwork: J. Neigel/MPIA."
+    text: "Many of these measurements are limited by today's telescopes: faint isotopologue lines take hours per pointing, so cloud-scale, multi-line maps exist for only a handful of galaxies. I contribute to the science case for ALMA2040, the planned next generation of ALMA. I am lead author of an ALMA2040 white paper showing how such an interferometer could deliver millions of measurements of the physical state of molecular gas, gave a contributed talk on antenna size and number at the Lorentz Workshop on ALMA2040 (2025), and organized a session on ALMA2040 at the 2026 AG meeting."
+    papers: ["2610.21891"]
+
+observing:
+  intro: "Programs I lead as principal investigator (PI), 2020–2025."
+  pi:
+    - telescope: "SMA"
+      hours: "~750 h"
+      programs: 12
+    - telescope: "IRAM 30m"
+      hours: "~300 h"
+      programs: 7
+    - telescope: "NOEMA"
+      hours: "60 h"
+      programs: 3
+    - telescope: "ALMA"
+      hours: "55 h"
+      note: "12m time"
+      programs: 4
+  highlights:
+    - "Member of the SMA telescope allocation committee since 2024"
+    - "Co-I on the ALMA Large Program 2025.1.00576.L (107 h)"
+    - "Co-I on the JWST Treasury program #3707 (~150 h)"
+    - "Co-I on the IRAM NOEMA Large Programme M19AA (200 h)"
+
+past:
+  - title: "BASS: The near-infrared view of nearby AGN"
+    image: "../publications/2207.12426.jpg"
+    image_alt: "Detection rates of near-infrared coronal lines in active galactic nuclei"
+    text: "As part of my Master's thesis, I worked in the BAT AGN Spectroscopic Survey (BASS), studying near-infrared emission lines of nearby active galactic nuclei as tracers of AGN activity."
+    paper: "2207.12426"
+    url: "https://www.bass-survey.com/"
+    url_label: "BASS website"
+  - title: "MUSE: Probing AGN unification at z ~ 3"
+    image: "../publications/2005.01732.jpg"
+    image_alt: "MUSE maps of giant Lyman-alpha nebulae around active galactic nuclei"
+    text: "With Prof. Sebastiano Cantalupo and the MUSE consortium, I studied giant Lyman-alpha nebulae around type I and type II AGN in the early Universe to test the AGN unification model."
+    paper: "2005.01732"

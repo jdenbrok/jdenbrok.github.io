@@ -1,0 +1,50 @@
+/* Research page (research.html); builds on css/publications.css */
+
+.res-intro { font-size: 1.15rem; line-height: 1.8; color: #555; margin-bottom: 1.5rem; }
+
+.res-toc { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3.5rem; }
+.res-toc a {
+  border: 1px solid #dee2e6;
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+.res-toc a:hover { border-color: #000; color: #000; }
+
+.res-theme { scroll-margin-top: 2rem; }
+.pub-feature.res-wide, .pub-feature.res-wide:nth-of-type(even) { flex-direction: column; align-items: stretch; gap: 1.5rem; }
+.pub-feature.res-wide .pub-figure { flex-basis: auto; }
+figure.pub-figure { margin: 0; }
+.res-caption { font-size: 0.8rem; color: #777; margin-top: 0.6rem; }
+.res-title { font-size: 1.5rem; color: #000; margin-bottom: 0.8rem; }
+.res-sub {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #000;
+  margin: 1.2rem 0 0.4rem;
+}
+.res-papers { padding-left: 1.1rem; margin-bottom: 1rem; }
+.res-papers li { margin-bottom: 0.4rem; line-height: 1.5; font-size: 0.9rem; }
+.res-papers .m { display: block; font-size: 0.8rem; }
+.res-papers .m b { color: #000; }
+
+#observing, #past { scroll-margin-top: 2rem; }
+.res-obs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.res-obs-tile { border: 1px solid #eee; padding: 1.2rem; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04); }
+.res-obs-tile .lbl { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.res-obs-tile .num { font-size: 2rem; font-weight: 600; color: #000; line-height: 1.3; }
+.res-obs-tile .m { font-size: 0.8rem; }
+.res-highlights { padding-left: 1.1rem; }
+.res-highlights li { margin-bottom: 0.3rem; }
+
+.res-past { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+.res-past-card img { width: 100%; height: 200px; object-fit: cover; object-position: top; border: 1px solid #eee; margin-bottom: 1rem; }
+.res-past-card h3 { font-size: 1.1rem; color: #000; }
+.res-past-card p { font-size: 0.9rem; }
